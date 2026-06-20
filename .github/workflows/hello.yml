@@ -5,7 +5,7 @@ name: Hello
 on: 
   workflow_dispatch:
   
-# Job tells what the workflow should do, there can be one or more than one jobs, hence we write Jobs
+# (Jobs should be inside the workflow) Job tells what the workflow should do, there can be one or more than one jobs, hence we write Jobs
 # jobs is an object so needs indentation
 
 jobs:
@@ -14,6 +14,8 @@ jobs:
     # Creates an Ephermal Container with Ubuntu running
     runs-on: ubuntu-latest
     # That ephermal container will have steps to execute, hence name those steps and use run: run has the command
+    # (Steps should be inside the jobs)
     steps:
+    # (Actions should be inside the steps)
       - name: Say hello to all
         run: echo "Hello All"
