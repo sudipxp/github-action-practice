@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     # That ephermal container will have steps to execute, hence name those steps and use run: run has the command
     # (Steps should be inside the jobs)
-    steps:
-    # (Actions should be inside the steps)
+    steps:    
       - name: Say hello to all
         run: echo "Hello All"
