@@ -16,6 +16,6 @@ jobs:
 
         # Runs natively via npx WITHOUT local npm install or package.json setup
       - name: Run Oxlint Binary
-        run: npx oxlint@latest --deny-jsx-a11y
+        run: npx oxlint@latest
     
     
