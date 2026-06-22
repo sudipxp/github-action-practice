@@ -1,4 +1,3 @@
-# This code is from Devboard
 import { IconClock, IconUser, IconGripVertical } from '@tabler/icons-react';
 import { StatusBadge, PriorityBadge } from '../ui/Badge';
 import { Avatar } from '../ui/Avatar';
