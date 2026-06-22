@@ -1,0 +1,18 @@
+# Workflow of this goal is to lint the code like to check syntax error, formatting and identation. 
+
+name: Lint
+
+on: push
+
+jobs:
+  code-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chekout or clone the code
+        uses: actions/checkout@v7     
+
+        # linter installation
+      - name: Run Linter
+        run: npm run lint
+    
+    
