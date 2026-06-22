@@ -2,17 +2,23 @@
 
 name: Lint
 
-on: push
+on: 
+  push:
+    paths: "*.jsx"
 
 jobs:
   code-lint:
+    name: Run Super-Linter
     runs-on: ubuntu-latest
     steps:
       - name: Chekout or clone the code
-        uses: actions/checkout@v7     
+        uses: actions/checkout@v7    
+        with:
+          # Super-Linter needs full git history to scan modified files accurately
+          fetch-depth: 0
 
         # linter installation
-      - name: Run Linter
-        run: npm run lint
+      - name: Run Super-Linter
+        uses: super-linter/super-linter/slim@v7
     
     
