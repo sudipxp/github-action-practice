@@ -12,7 +12,7 @@ export function TaskCard({
   onClick,
 }) {
   const due = task.due_date ? new Date(task.due_date).toLocaleDateString() : null;
-  return (
+  return 
     <article
       draggable={draggable}
       onDragStart={onDragStart}
