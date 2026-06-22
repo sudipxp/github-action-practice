@@ -8,17 +8,14 @@ on:
 
 jobs:
   code-lint:
-    name: Run Super-Linter
+    name: Run Oxlint
     runs-on: ubuntu-latest
     steps:
       - name: Chekout or clone the code
-        uses: actions/checkout@v7    
-        with:
-          # Super-Linter needs full git history to scan modified files accurately
-          fetch-depth: 0
+        uses: actions/checkout@v7            
 
-        # linter installation
-      - name: Run Super-Linter
-        uses: super-linter/super-linter/slim@v7
+        # Runs natively via npx WITHOUT local npm install or package.json setup
+      - name: Run Oxlint Binary
+        run: npx oxlint@latest --deny-jsx-a11y
     
     
